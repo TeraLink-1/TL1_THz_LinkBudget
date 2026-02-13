@@ -20,7 +20,7 @@ targetBitRate = 1e8;
 targetBER     = 1e-4;       
 rolloff       = 0.3;
 BW       = 1.30e8;            %[Hz] 130 MHz = 100 Mbps
-atmType = "InterpSummer"; %["Summer 45","Winter 45","Annual 15","InterpWinter","InterpSummer", or "AndrewsBostonProfile"];
+atmType = "InterpSummer"; % ["Summer 45","Winter 45","Annual 15","InterpWinter","InterpSummer", or "AndrewsBostonProfile"];
 %% ---- Hardware Performance----
 % System Gains and Output Power
 sat_tx        = 24.98;   % [dBm]
