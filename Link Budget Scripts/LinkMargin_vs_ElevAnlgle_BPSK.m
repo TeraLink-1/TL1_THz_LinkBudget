@@ -22,15 +22,24 @@ rolloff       = 0.3;
 BW       = 1.30e8;            %[Hz] 130 MHz = 100 Mbps
 atmType = "InterpSummer"; %["Summer 45","Winter 45","Annual 15","InterpWinter","InterpSummer", or "AndrewsBostonProfile"];
 %% ---- Hardware Performance----
+% System Gains and Output Power
 sat_tx        = 24.98;   % [dBm]
 geff_satAnt   = 38; %     % Updated value (was 44 originally): true effective gain acc to Albert after all antenna specific losses. [dBi]
+geff_gsAnt = [69,70,71,72,73,74,75];   % [dBi]
+
+% Radio NF
 NF       = 7;            %[dB]
-GS_feed_network_loss = 3;
-GS_radome = 2;
-geff_gsAnt = [55,55.5,56,57,58,61,62] + 6;   % [dBi]
+
+% Additional System Losses
+GS_feed_network_loss = 2.48;
+GS_radome = 1.5;
+Imp_loss = 1.15; % Implementation loss (added per UNP feedback)
+
+loss_adt = GS_feed_network_loss + GS_radome + Imp_loss; 
+
 %% ---- Pointing Losses ----
-gs_ptg_error_loss = 1.2; %[dB]
-sat_ptg_error_loss = 1; %[dB]
+gs_ptg_error_loss = 3.01; %[dB]
+sat_ptg_error_loss = 0.62; %[dB]
 polarization_miss_match_loss = 0.033; %[dB]
 l_ptg = gs_ptg_error_loss+sat_ptg_error_loss+polarization_miss_match_loss;
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -89,7 +98,7 @@ for k = 1:numel(geff_gsAnt)
     % Received power vs elevation (dBm)
     p_rx_dBm = zeros(size(Elev));
     for j = 1:numel(Elev)
-        p_rx_dBm(j) = linkBudget_Simplified(sat_tx, geff_satAnt, geff_gsAnt(k), freq_Hz, slant_dist_m(j), l_abs(1,1,j), l_ptg); % result is in dBm
+        p_rx_dBm(j) = linkBudget_Simplified(sat_tx, geff_satAnt, geff_gsAnt(k), freq_Hz, slant_dist_m(j), l_abs(1,1,j), l_ptg, loss_adt); % result is in dBm
     end
    
      % Noise floor (dBm), SNR, Eb/N0, Link Margin
