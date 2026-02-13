@@ -1,11 +1,13 @@
 # THzGS_LinkBudget_Calcs
 
+## Relevant Notes
+Closes for 75 dB effective GS antenna gain. For 5 dB efficiency loss, this corresponds with 80 dBi directivity (> 3 meter diameter!)
+
 
 ### Orbit & Geometry
 
 | Parameter | Value |
 |-----------|---------|
-| Orbit Altitude (best case) | 416 km |
 | Orbit Altitude (worst case) | 600 km |
 | Earth Mean Radius | 6371 km |
 | GS Antenna Height (ASL) | 33.2 m |
