@@ -25,19 +25,12 @@
 
 ---
 
-### Spacecraft Transmitter
+### Payload (Spacecraft and Ground Station)
 
 | Parameter | Value |
 |-----------|---------|
 | Transmit Power | 24.98 dBm |
 | Antenna Effective Gain | 38 dBi |
-
----
-
-### Ground Station Receiver
-
-| Parameter | Value |
-|-----------|---------|
 | Antenna Effective Gain Sweep | 69–75 dBi |
 | Environment Noise Temp | 300 K |
 | Receiver Equivalent Noise Temp | 1163 K |
