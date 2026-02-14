@@ -1,6 +1,6 @@
 # THzGS_LinkBudget_Calcs
 
----------------------------------------------------------------------------------
+---
 
 ## Relevant Mission Commentary
 Plan and expect a 6-month-long mission. Design satellite bus as though we were doing 1-year-long mission.
@@ -15,7 +15,7 @@ Expected number of passes over Boston NU Campus (during 6 month-long mission) th
 ## Relevant Dish Commentary
 Closes for 75 dB effective GS antenna gain. For 5 dB efficiency loss, this corresponds with 80 dBi directivity which is just under 5 meters in diameter!
 
----------------------------------------------------------------------------------
+---
 
 ## Link Budget Parameters 
 
@@ -28,8 +28,6 @@ Closes for 75 dB effective GS antenna gain. For 5 dB efficiency loss, this corre
 | GS Antenna Height (ASL) | 33.2 m |
 | GS Coordinates | (42.33°, −71.09°) |
 
----
-
 ### RF & Waveform
 
 | Parameter | Value |
@@ -39,8 +37,6 @@ Closes for 75 dB effective GS antenna gain. For 5 dB efficiency loss, this corre
 | Target Bit Rate | 100 Mbit/s |
 | Roll-off Factor | 0.3 |
 | RF Bandwidth | 130 MHz |
-
----
 
 ### Payload (Spacecraft and Ground Station)
 
