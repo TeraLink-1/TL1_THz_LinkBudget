@@ -1,7 +1,24 @@
 # THzGS_LinkBudget_Calcs
 
+## Relevant Mission Commentary
+Plan and expect a 6-month-long mission. Design satellite bus as though we were doing 1-year-long mission.
+
+Expected number of passes over Boston NU Campus (during 6 month-long mission) that reach X degrees of elevation for at least 20 seconds shown in the table bellow:
+| SC Inclination Angle (°) | Altitude (km) | X Elev. Angle (°) from GS | Num. Passes | Commentary | 
+|-----------|---------|---------|---------|---------|
+| 45 | 600 | 60 |  | Typical rideshare orbit |
+| 45 | 550 | 60 |  | Typical rideshare orbit |
+| 50 | 600 | 60 |  | Typical rideshare orbit |
+| 50 | 550 | 60 |  | Typical rideshare orbit |
+| 51.6 | 416 | 60 | 140 | ISS orbit |
+| 55 | 600 | 60 |  | Typical rideshare orbit |
+| 55 | 550 | 60 |  | Typical rideshare orbit |
+| 60 | 600 | 60 |  | Typical rideshare orbit |
+| 60 | 550 | 60 |  | Typical rideshare orbit |
+
+
 ## Relevant Notes
-Closes for 75 dB effective GS antenna gain. For 5 dB efficiency loss, this corresponds with 80 dBi directivity (> 3 meter diameter!)
+Closes for 75 dB effective GS antenna gain. For 5 dB efficiency loss, this corresponds with 80 dBi directivity (just under 5 meters in diameter!)
 
 
 ### Orbit & Geometry
