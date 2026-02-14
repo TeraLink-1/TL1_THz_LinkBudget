@@ -1,7 +1,5 @@
 # THzGS_LinkBudget_Calcs
 
----
-
 ## Relevant Mission Commentary
 Plan and expect a 6-month-long mission. Design satellite bus as though we were doing 1-year-long mission.
 
@@ -20,7 +18,6 @@ Closes for 75 dB effective GS antenna gain. For 5 dB efficiency loss, this corre
 ## Link Budget Parameters 
 
 #### Orbit & Geometry
-
 | Parameter | Value |
 |-----------|---------|
 | Orbit Altitude (worst case) | 600 km |
@@ -29,7 +26,6 @@ Closes for 75 dB effective GS antenna gain. For 5 dB efficiency loss, this corre
 | GS Coordinates | (42.33°, −71.09°) |
 
 ### RF & Waveform
-
 | Parameter | Value |
 |-----------|---------|
 | Center Frequency | 225 GHz |
@@ -39,7 +35,6 @@ Closes for 75 dB effective GS antenna gain. For 5 dB efficiency loss, this corre
 | RF Bandwidth | 130 MHz |
 
 ### Payload (Spacecraft and Ground Station)
-
 | Parameter | Value |
 |-----------|---------|
 | Transmit Power | 24.98 dBm |
