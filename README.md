@@ -1,6 +1,8 @@
 # THzGS_LinkBudget_Calcs
 
-## Relevant Mission Commentary
+## Relevant Commentary
+
+### Mission Specific
 Plan and expect a 6-month-long mission. Design satellite bus as though we were doing 1-year-long mission.
 
 Expected number of passes over Boston NU Campus (during 6 month-long mission) that reach X degrees of elevation (from GS pov) for at least 20 seconds shown in the table below. pairings (600km, 73°) and (550km, 67°) are done based on what elevation angle closes the link budget at the corresponding altitude during the summer season when using a 75 dBi effective ground dish antenna.  
@@ -10,7 +12,7 @@ Expected number of passes over Boston NU Campus (during 6 month-long mission) th
 | 45-60° | 550 km | 67° | TBD | Typical rideshare orbits |
 | 51.6° | 416 km| 60° | ~140 | ISS orbit |
 
-## Relevant Dish Commentary
+### Dish + Payload Specific
 Closes for 75 dB effective GS antenna gain. For 5 dB efficiency loss, this corresponds with 80 dBi directivity which is just under 5 meters in diameter!
 
 ---
