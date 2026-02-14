@@ -7,8 +7,8 @@ K_boltz = physconst('boltzman');
 T0      = 290;
 c       = physconst('LightSpeed');
 %% ---- Geographic Specifications----
-alt_m  = 550e3;            % [m] 
-inclination_angle = 51.6;   %[degrees]
+alt_m  = 600e3;            % [m] 
+inclination_angle = 45; %51.6;   %[degrees]
 GS_pos_m      = (6371000 + 18+12.192+3); %m (6371000 is Earth average radius in meters, the rest are MSL of location+ building height +antenna mast height)
 gs_lat   = 42.3378054237531; % Egan Roof
 gs_long = -71.08885435; % Egan Roof
