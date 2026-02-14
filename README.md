@@ -10,8 +10,8 @@ Expected number of passes over Boston NU Campus (during 6 month-long mission) th
 | 45-60° | 550 km | 67° | TBD | Typical rideshare orbits |
 | 51.6° | 416 km| 60° | ~140 | ISS orbit |
 
-## Relevant Notes
-Closes for 75 dB effective GS antenna gain. For 5 dB efficiency loss, this corresponds with 80 dBi directivity (just under 5 meters in diameter!)
+## Relevant Dish Commentary
+Closes for 75 dB effective GS antenna gain. For 5 dB efficiency loss, this corresponds with 80 dBi directivity which is just under 5 meters in diameter!
 
 
 ### Orbit & Geometry
