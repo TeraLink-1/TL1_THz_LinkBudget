@@ -1,5 +1,7 @@
 # THzGS_LinkBudget_Calcs
 
+---------------------------------------------------------------------------------
+
 ## Relevant Mission Commentary
 Plan and expect a 6-month-long mission. Design satellite bus as though we were doing 1-year-long mission.
 
@@ -13,6 +15,9 @@ Expected number of passes over Boston NU Campus (during 6 month-long mission) th
 ## Relevant Dish Commentary
 Closes for 75 dB effective GS antenna gain. For 5 dB efficiency loss, this corresponds with 80 dBi directivity which is just under 5 meters in diameter!
 
+---------------------------------------------------------------------------------
+
+## Link Budget Parameters 
 
 #### Orbit & Geometry
 
