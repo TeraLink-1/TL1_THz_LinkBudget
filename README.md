@@ -14,7 +14,7 @@ Expected number of passes over Boston NU Campus (during 6 month-long mission) th
 Closes for 75 dB effective GS antenna gain. For 5 dB efficiency loss, this corresponds with 80 dBi directivity which is just under 5 meters in diameter!
 
 
-### Orbit & Geometry
+#### Orbit & Geometry
 
 | Parameter | Value |
 |-----------|---------|
