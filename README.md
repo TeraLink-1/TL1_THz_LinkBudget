@@ -47,7 +47,7 @@ Closes for 75 dB effective GS antenna gain. For 5 dB efficiency loss, this corre
 | Environment Noise Temp | 300 K |
 | Receiver Equivalent Noise Temp | 1163 K |
 | Feeding Network Loss | 2.48 dB |
-| Radome Loss (est.) | 1.50 dB |
+| Radome Loss (guesstimate) | 1.50 dB |
 | Implementation Loss | 1.15 dB |
 
 
