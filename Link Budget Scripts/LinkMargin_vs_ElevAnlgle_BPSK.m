@@ -9,12 +9,19 @@ c       = physconst('LightSpeed');
 %% ---- Geographic Specifications----
 alt_m  = 600e3;            % [m] 
 inclination_angle = 45; %51.6;   %[degrees]
-GS_pos_m      = (6371000 + 18+12.192+3); %m (6371000 is Earth average radius in meters, the rest are MSL of location+ building height +antenna mast height)
+% GS height: 18+12.192+3 is height above sea level (MSL)
+h_msl_m = 18.12; 
+h_bldg_m = 12.192;
+h_mast_m = 3;
+h_gs_tot_m = h_msl_m + h_bldg_m + h_mast_m;
+GS_pos_m      = (6371000 + h_gs_tot_m); %m (6371000 is Earth average radius in meters, the rest are MSL of location+ building height +antenna mast height)
+
 gs_lat   = 42.3378054237531; % Egan Roof
 gs_long = -71.08885435; % Egan Roof
 Elev = linspace(0,90,91);
+
 %% ---- RF Hardware Parameters ----
-freq_Hz       = 2.25 * 1e11;
+freq_Hz       = 225 * 1e9;
 M = 2; %BPSK
 targetBitRate = 1e8;
 targetBER     = 1e-4;       
@@ -51,11 +58,10 @@ slant_dist_m  = sqrt(GS_pos_m.^2 .* sind(Elev).^2 + 2*GS_pos_m*alt_m + alt_m.^2)
               - GS_pos_m .* sind(Elev)      ;           % [m]
 
 % ---- GS Noise Profiles ----
-% 18+12.192+3 is height above sea level (MSL)
-[T1,P1,e1]     = atmProfile(18+12.192+3,"Annual 15");
-[T2S,P2S,e2S]  = atmProfile(18+12.192+3,"Summer 45");
+[T1,P1,e1]     = atmProfile(h_gs_tot_m/1000,"Annual 15");
+[T2S,P2S,e2S]  = atmProfile(h_gs_tot_m/1000,"Summer 45");
 [Tgs_s,~,~]     = InterpAtm({T1,P1,e1},{T2S,P2S,e2S},gs_lat);
-[T2W,P2W,e2W]  = atmProfile(18+12.192+3,"Winter 45");
+[T2W,P2W,e2W]  = atmProfile(h_gs_tot_m/1000,"Winter 45");
 [Tgs_w,~,~]     = InterpAtm({T1,P1,e1},{T2W,P2W,e2W},gs_lat);
 T_gs_s = max(Tgs_s, 300);
 
@@ -94,7 +100,7 @@ colors = [
 
 for k = 1:numel(geff_gsAnt)
     % Atmospheric absorption along slant path
-    l_abs = absLossSlant(alt_m/1000, freq_Hz*1e-9, Elev, hstep, (18+12.192+3)/1000, atmType, gs_lat); % [dB]
+    l_abs = absLossSlant(alt_m/1000, freq_Hz*1e-9, Elev, hstep, (h_gs_tot_m)/1000, atmType, gs_lat); % [dB]
     % Received power vs elevation (dBm)
     p_rx_dBm = zeros(size(Elev));
     for j = 1:numel(Elev)
