@@ -7,9 +7,10 @@ K_boltz = physconst('boltzman');
 T0      = 290;
 c       = physconst('LightSpeed');
 %% ---- Geographic Specifications----
-alt_m  = 600e3;            % [m] 
+alt_m  = 500e3;            % [m] 
 inclination_angle = 45; %51.6;   %[degrees]
-GS_pos_m      = (6371000 + 18+12.192+3); %m (6371000 is Earth average radius in meters, the rest are MSL of location+ building height +antenna mast height)
+H_abv_Sea = 18+12.192+3;
+GS_pos_m      = (6371000 + H_abv_Sea); %m (6371000 is Earth average radius in meters, the rest are MSL of location+ building height +antenna mast height)
 gs_lat   = 42.3378054237531; % Egan Roof
 gs_long = -71.08885435; % Egan Roof
 Elev = linspace(0,90,91);
@@ -24,14 +25,14 @@ atmType = "InterpSummer"; % ["Summer 45","Winter 45","Annual 15","InterpWinter",
 %% ---- Hardware Performance----
 % System Gains and Output Power
 sat_tx        = 24.98;   % [dBm]
-geff_satAnt   = 38; %     % Updated value (was 44 originally): true effective gain acc to Albert after all antenna specific losses. [dBi]
+geff_satAnt   = 40; %     % [dBi]
 geff_gsAnt = [69,70,71,72,73,74,75];   % [dBi]
 
 % Radio NF
 NF       = 7;            %[dB]
 
 % Additional System Losses
-GS_feed_network_loss = 2.48;
+GS_feed_network_loss = 2.48; %including RF path switch
 GS_radome = 1.5;
 Imp_loss = 1.15; % Implementation loss (added per UNP feedback)
 
@@ -48,14 +49,14 @@ l_ptg = gs_ptg_error_loss+sat_ptg_error_loss+polarization_miss_match_loss;
 % ---- Atmosphere ----
 hstep    = 0.1;            % [km]
 slant_dist_m  = sqrt(GS_pos_m.^2 .* sind(Elev).^2 + 2*GS_pos_m*alt_m + alt_m.^2) ...
-              - GS_pos_m .* sind(Elev)      ;           % [m]
+              - GS_pos_m .* sind(Elev)     ;           % [m]
 
 % ---- GS Noise Profiles ----
 % 18+12.192+3 is height above sea level (MSL)
-[T1,P1,e1]     = atmProfile(18+12.192+3,"Annual 15");
-[T2S,P2S,e2S]  = atmProfile(18+12.192+3,"Summer 45");
+[T1,P1,e1]     = atmProfile(H_abv_Sea,"Annual 15");
+[T2S,P2S,e2S]  = atmProfile(H_abv_Sea,"Summer 45");
 [Tgs_s,~,~]     = InterpAtm({T1,P1,e1},{T2S,P2S,e2S},gs_lat);
-[T2W,P2W,e2W]  = atmProfile(18+12.192+3,"Winter 45");
+[T2W,P2W,e2W]  = atmProfile(H_abv_Sea,"Winter 45");
 [Tgs_w,~,~]     = InterpAtm({T1,P1,e1},{T2W,P2W,e2W},gs_lat);
 T_gs_s = max(Tgs_s, 300);
 
@@ -94,7 +95,7 @@ colors = [
 
 for k = 1:numel(geff_gsAnt)
     % Atmospheric absorption along slant path
-    l_abs = absLossSlant(alt_m/1000, freq_Hz*1e-9, Elev, hstep, (18+12.192+3)/1000, atmType, gs_lat); % [dB]
+    l_abs = absLossSlant(alt_m/1000, freq_Hz*1e-9, Elev, hstep, (H_abv_Sea)/1000, atmType, gs_lat); % [dB]
     % Received power vs elevation (dBm)
     p_rx_dBm = zeros(size(Elev));
     for j = 1:numel(Elev)
