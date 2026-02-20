@@ -13,7 +13,7 @@ Expected number of passes over Boston NU Campus (during 6 month-long mission) th
 | 51.6° | 416 km| 60° | ~140 | ISS orbit |
 
 #### _Dish & Payload Specific_
-Closes for 75 dB effective GS antenna gain. For 5 dB efficiency loss, this corresponds with 80 dBi directivity which is just under 5 meters in diameter!
+Dish: Closes for 75 dB effective GS antenna gain. Considering efficiencies from 34-60%. At 34% (roughly 5 dB of loss) and at 60% (roughly 2.22 dB of loss)
 
 ---
 
