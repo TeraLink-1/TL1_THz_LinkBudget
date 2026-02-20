@@ -8,7 +8,7 @@ Plan and expect a 6-month-long mission. Design satellite bus as though we were d
 Expected number of passes over Boston NU Campus (during 6 month-long mission) that reach X degrees of elevation (from GS pov) for at least 20 seconds shown in the table below. pairings (600km, 73°) and (550km, 67°) are done based on what elevation angle closes the link budget at the corresponding altitude during the summer season when using a 75 dBi effective ground dish antenna.  
 | Orbit Inclination | Altitude | X Elev. | Num. Passes | Commentary | 
 |-----------|---------|---------|---------|---------|
-~~| 45-60° | 600 km | 73° | TBD | Typical rideshare orbits |~~
+| ~~45-60°~~ | ~~600 km~~ | ~~73°~~ | ~~TBD~~ | ~~Typical rideshare orbits~~ |
 | 45-60° | 550 km | 67° | TBD | Typical rideshare orbits |
 | 51.6° | 416 km| 60° | ~140 | ISS orbit |
 
