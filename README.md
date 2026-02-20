@@ -9,7 +9,7 @@ Expected number of passes over Boston NU Campus (during 6 month-long mission) th
 | Orbit Inclination | Altitude | X Elev. | Num. Passes | Commentary | 
 |-----------|---------|---------|---------|---------|
 | ~~45-60°~~ | ~~600 km~~ | ~~73°~~ | ~~TBD~~ | ~~Typical rideshare orbits~~ |
-| 45-60° | 550 km | 67° | TBD | Typical rideshare orbits |
+| 45-60° | 500 km | 67° | TBD | Max Tolerable Orbit |
 | 51.6° | 416 km| 60° | ~140 | ISS orbit |
 
 #### _Dish & Payload Specific_
