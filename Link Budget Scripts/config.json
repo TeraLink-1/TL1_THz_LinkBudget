@@ -1,6 +1,6 @@
 {
     "orbit": {
-        "alt_km": 500,
+        "alt_km": 300,
         "inclination_deg": 45
     },
     "satellite": {
@@ -13,10 +13,10 @@
         "target_BER": 0.0001
     },
     "losses": {
-        "GS_feed_network_dB": 2.48,
+        "GS_feed_network_dB": 2,
         "GS_radome_dB": 1.5,
-        "implementation_dB": 1.15,
-        "gs_pointing_error_dB": 3.01,
+        "implementation_dB": 1,
+        "gs_pointing_error_dB": 4.343,
         "sat_pointing_error_dB": 0.62,
         "polarization_mismatch_dB": 0.033
     },
