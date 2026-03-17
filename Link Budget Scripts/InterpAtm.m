@@ -14,8 +14,11 @@ function [T_interp, P_interp, e_interp] = InterpAtm(ref1, ref2, lat)
     end
 
     % Weight: clamp to [0,1] in case lat drifts outside 15–45 deg
-    w = (45 - lat) / (45 - 15);
-    w = max(0, min(1, w));
+    if lat > 45 || lat < 15
+        fprintf('Using script with out-of-bound values. Interpolation should be done only for latitudes between 15 and 45.\n');
+    else
+        w = (45 - lat) / (45 - 15);
+    end
 
     % Extract from cells
     T1 = ref1{1};  P1 = ref1{2};  e1 = ref1{3};
