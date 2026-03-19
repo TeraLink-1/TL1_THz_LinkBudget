@@ -1,0 +1,26 @@
+{
+    "orbit": {
+        "alt_km": 300,
+        "inclination_deg": 45
+    },
+    "satellite": {
+        "tx_power_dBm": 24.98,
+        "antenna_gain_dBi": 40
+    },
+    "modulation": {
+        "scheme": "BPSK",
+        "M": 2,
+        "target_BER": 0.0001
+    },
+    "losses": {
+        "GS_feed_network_dB": 2,
+        "GS_radome_dB": 1.5,
+        "implementation_dB": 1,
+        "gs_pointing_error_dB": 4.343,
+        "sat_pointing_error_dB": 0.62,
+        "polarization_mismatch_dB": 0.033
+    },
+    "atmosphere": {
+        "type": "InterpSummer"
+    }
+}
