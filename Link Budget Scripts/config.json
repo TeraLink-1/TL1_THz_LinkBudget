@@ -1,6 +1,6 @@
 {
     "orbit": {
-        "alt_km": 300,
+        "alt_km": 550,
         "inclination_deg": 45
     },
     "satellite": {
@@ -10,7 +10,7 @@
     "modulation": {
         "scheme": "BPSK",
         "M": 2,
-        "target_BER": 0.0001
+        "target_BER": 0.01
     },
     "losses": {
         "GS_feed_network_dB": 2,
