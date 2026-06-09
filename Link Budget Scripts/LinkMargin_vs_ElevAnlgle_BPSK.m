@@ -55,7 +55,7 @@ BW            = 1.30e8;                 % [Hz] 130 MHz
 NF = 7;                                 % [dB]
 
 % GS antenna gain sweep
-geff_gsAnt = [69, 70, 71, 72, 73, 74, 75];
+geff_gsAnt = [66, 67 ,68, 69, 70, 71, 72, 73, 74];
 
 % Atmosphere integration
 hstep = 0.1;                            % [km]
@@ -105,7 +105,7 @@ xlabel('Elevation Angle [deg]');
 ylabel('Link Margin (dB)');
 title(sprintf('Link Margin vs Elevation Angle at %.0f GHz', freq_Hz * 1e-9));
 xlim([10, 90]);
-ylim([-40, 100]);
+ylim([-20, 20]);
 
 %% ========================================================================
 %  Main sweep over GS antenna gains
